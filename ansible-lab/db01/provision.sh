@@ -2,3 +2,8 @@
 cat << EOT >> /home/vagrant/.ssh/authorized_keys
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUnVHAE0wdounIJFnfrBGMXLuG28ARcDFMyKUPxoB5YfFh7ZAI0EL5Od74wFS67zdKOXP7LtsNedz4FPwpO9hoJEwzSNFJBW43OXQXbzIhPv5fwZKzKjT/9E8q879+4RffHxMBoTaTA2+pXBfQxgvEATbeXpoU5FkRimLOsa8DNzAUbgsEwtjLmm+Hm5Snp9DJVVV/5BXt1BW17lQ7xmd8APw21sCvOxz2o21oRsccnSCbDQMYpcND3CJVlC3TNDRWCtHRCvj5Dup2AP0gMY2AsCCZ8LIBVHx6vosfgpjIYTCHMYnmpkHwk0mEcYL90s81PyCjyHRJYvcAL+EZaj8v vagrant@control-node
 EOT
+
+cat <<EOT >> /etc/hosts
+192.168.1.2 control-node
+192.168.1.3 app01
+EOT
