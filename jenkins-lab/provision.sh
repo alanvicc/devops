@@ -6,7 +6,7 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 yum install java-11-openjdk-devel -y
 yum install jenkins -y
 systemctl daemon-reload
-service jenkins start
+sudo service jenkins start
 
 ###instalacao do docker e docker compose
 sudo yum install -y yum-utils
@@ -28,7 +28,7 @@ yum install wget unzip -y
 wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
 unzip sonar-scanner-cli-4.6.2.2472-linux.zip -d /opt/
 sudo mv /opt/sonar-scanner-4.6.2.2472-linux /opt/sonar-scanner
-chown -R sonar:sonar /opt/sonar-scanner
+chown -R jenkins:jenkins /opt/sonar-scanner
 echo 'export PATH=$PATH:/opt/sonar-scanner/bin' | sudo tee -a /etc/profile
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 sudo yum install nodejs -y

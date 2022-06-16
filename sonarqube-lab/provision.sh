@@ -22,7 +22,7 @@ Restart=always
 WantedBy=multi-user.target
 EOT
 
-service sonar start
+sudo service sonar start
 #instalar sonar scanner
 
 wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
