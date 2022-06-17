@@ -10,8 +10,6 @@ Laboratorios de estudo das ferramentas mais utilizadas em praticas DevSecOps
 <br/>
 
 ## Tecnologias Utilizadas
-
-<br/>
  - Vagrant 
 
  <br/>
