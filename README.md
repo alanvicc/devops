@@ -1,15 +1,27 @@
-# Estudo de ferramentas de praticas DevSecOps
+## Sobre este projeto 
+Laboratorios de estudo das ferramentas mais utilizadas em praticas DevSecOps
 
-Uso do Vagrant como plataforma de gerenciamento de máquinas virtuais para Lab.
+## Meu Perfil no Linkedin
+<br/>
+<a href="https://www.linkedin.com/in/alan-victor-222617205/">
+    <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" height="25"/>
+  </a>
+</div>
+<br/>
 
-Ansible: laboratório 100% prático com exemplos de como configurar o managed host, criar playbooks e efetuar o deploy de uma aplicação Java com banco de dados MySQL.
-
-Docker: Introdução de instalação e configuração do Docker, exemplos de comandos mais utilizados e por fim como criar uma imagem docker e exemplo de uso do Docker compose como ferramenta de orquestração de containers.
-
-Jenkins: O coração do pipeline DevOps. Nesse tópico serão abordados temas de instalação e configuração do Jenkins, criação de pipelines que vão desde a compilação de códigos fonte, startup de containers, testes integrados, build de imagens Docker e como aplicar o git flow no pipline CI/CD.
-
-Sonarqube: Melhore a segurança e a qualidade de código com Sonarqube. Entenda o funcionamento integrado do Sonar com o Jenkins, configurando um pipeline DevOps ainda mais completo.
-
-Kubernetes: Aprenda como instalar e configurar o K3s, distribuição mais leve do Kubernetes utilizada em nosso laboratório. O k3s será utilizado na esteira DevOps o passo de CD (Deployment continuo) disponibilizando uma aplicação funcional em NodeJs e Redis.
-
-Observability: Entenda como instalar configurar o Prometheus, ferramenta de observability muito popular para monitoria de containers e ambientes baseados em microsserviços. Configure dashboards conectados ao Prometheus com o Grafana, ferramenta opensource muito utilizada para visualização de dados e gráficos.
+## Tecnologias Utilizadas
+<p align="left">
+<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/85ec92b476b9e9ef1d1e18cb42f894b6124cee88/icons/ruby.svg" title="ruby" alt="ruby" width="25" height="25" />
+<br/>
+<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/85ec92b476b9e9ef1d1e18cb42f894b6124cee88/icons/cucumber.svg" title="cucumber" alt="cucumber" width="25" height="25" />
+<img src="https://avatars.githubusercontent.com/u/983927?s=200&v=4" title="selenium" alt="selenium" width="24" height="24" />
+<img src="https://img.stackshare.io/service/2595/capybara.png" title="capybara" alt="capybara" width="24" height="24" />
+<img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/1120bad531c928642d2ee49942be079a9fb0519b/icons/file_type_rspec.svg" title="rspec" alt="rspec" width="25" height="25" />
+<br/>
+<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/85ec92b476b9e9ef1d1e18cb42f894b6124cee88/icons/docker.svg" title="docker" alt="docker" width="25" height="25" />
+<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/85ec92b476b9e9ef1d1e18cb42f894b6124cee88/icons/database.svg" title="database" alt="database" width="25" height="25" />
+<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/85ec92b476b9e9ef1d1e18cb42f894b6124cee88/icons/gemfile.svg" title="gemfile" alt="gemfile" width="25" height="25" />
+<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/85ec92b476b9e9ef1d1e18cb42f894b6124cee88/icons/yaml.svg" title="yaml" alt="yaml" width="25" height="25" />
+<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/85ec92b476b9e9ef1d1e18cb42f894b6124cee88/icons/jenkins.svg" title="jenkins" alt="jenkins" width="25" height="25" />
+</P>
+<br/>
