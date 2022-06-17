@@ -12,10 +12,10 @@ Laboratorios de estudo das ferramentas mais utilizadas em praticas DevSecOps
 ## Tecnologias Utilizadas
  - Vagrant 
 
- <br/>
+ 
  - Ansible
 
-<br/>
+
  - Docker com Compose e Swarm
 
 <br/>
