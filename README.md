@@ -13,12 +13,30 @@ Laboratorios de estudo das ferramentas mais utilizadas em praticas DevSecOps
 
 <br/>
  - Vagrant 
+
+ <br/>
  - Ansible
+
+<br/>
  - Docker com Compose e Swarm
+
+<br/>
  - SonarQube com SonarScanner e Quality Gate 
+
+<br/>
  - Jenkins
+
+<br/>
  - Nexus
+
+<br/>
  - Kubernetes
+
+<br/>
  - Prometheus
+
+<br/>
  - Grafana
+
+<br/>
 <br/>
