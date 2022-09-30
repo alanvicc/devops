@@ -37,3 +37,12 @@ Laboratorios de estudo das ferramentas mais utilizadas em praticas DevSecOps
  - Grafana
 
 
+pipeline {
+    options {
+        office365ConnectorWebhooks([
+            [name: "Office 365", url: "${URL_WEBHOOK}", notifyBackToNormal: true, notifyFailure: true, notifyRepeatedFailure: true, notifySuccess: true, notifyAborted: true]
+        ])
+    }
+}
+
+
