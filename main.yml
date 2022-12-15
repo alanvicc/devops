@@ -1,0 +1,81 @@
+---
+    - name: Stop das instancias em execução 
+      shell: "{{ apphome }}/scripts/stopall"
+      ignore_errors: yes
+
+    - name: Limpa conteudo de deploys anteriores
+      file:
+        state: absent
+        path: "{{ apphome }}"  
+
+    - name: Criação do diretório do BSA
+      file:
+        path: "{{ apphome }}"
+        state: directory
+        owner: "{{ appuser }}"
+        group: "{{ appuser }}"
+
+    - name: Tranferencia do ZIP para o diretorio 
+      become: yes 
+      copy: 
+        src: "{{ bamboo_artifact_path }}/{{ appenv }}/bmd-snapshot-{{ appversion }}-distribution.zip"
+        dest: "{{ apphome }}"
+        owner: "{{ appuser }}"
+        group: "{{ appuser }}"
+        mode: '0755'
+
+    - name: Descompactando o artefato zip
+      unarchive:
+        src: "{{ apphome }}/bmd-snapshot-{{ appversion }}-distribution.zip"
+        dest: "{{ apphome }}"
+        remote_src: yes
+
+    - name: Apagando o artefato zip
+      file:
+        state: absent
+        path: "{{ apphome }}/bmd-snapshot-{{ appversion }}-distribution.zip"
+        
+    - name: Criando a pasta dos canais
+      shell: "cp -r {{ apphome }}/channels/CHANNEL {{ apphome }}/channels/{{ item }}"
+      with_items: "{{ channels_list }}"
+
+    - name: Copia dos arquivos de configuracoes
+      copy:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        remote_src: yes
+      with_items:
+        - { src: "{{ configs_path }}/rv.3pr", dest: "{{ apphome }}/cfg/" }
+        - { src: "{{ configs_path }}/java.3pr", dest: "{{ apphome }}/cfg/" }
+        - { src: "{{ configs_path }}/log4j2.xml", dest: "{{ apphome }}/cfg/" }
+        - { src: "{{ configs_path }}/instances.csv", dest: "{{ apphome }}/" }
+
+    - name: Copia dos arquivos de configuracoes individuais
+      shell: "cp {{ configs_path }}/{{ configs_vm }}/* {{ apphome }}/cfg"
+        
+    - name: Trocando o usuario e o grupo do diretorio
+      file:
+        path: "{{ apphome }}"
+        state: directory
+        recurse: yes
+        owner: "{{ appuser }}"
+        group: "{{ appuser }}"
+        mode: '0755'
+
+    - name: Start de todas as instancias
+      shell: "{{ apphome }}/scripts/startall"
+      become: yes
+      become_method: sudo
+      become_user: "{{ appuser }}"
+      become_flags: 'su -c'
+
+    - name: Validaçao do start instancia pelo log
+      shell: "cat {{ apphome }}/log/{{ item }}.log | grep 'SnapshotMain - Application started'"
+      with_items: "{{ channels_list }}"
+
+    - name: Listando as instancias
+      shell: "{{ apphome }}/scripts/seeall"
+      register: command_output
+
+    - debug:
+        var: command_output.stdout_lines
